@@ -1,0 +1,68 @@
+plugin:
+    name: 'frukt.books::lang.plugin.name'
+    description: 'frukt.books::lang.plugin.description'
+    author: Frukt
+    icon: oc-icon-book
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Справочники
+        url: /
+        icon: icon-life-ring
+        sideMenu:
+            side-menu-item:
+                label: Авторы
+                url: frukt/books/authors
+                icon: icon-user
+                permissions:
+                    - helpers
+            side-menu-item2:
+                label: Языки
+                url: frukt/books/languages
+                icon: icon-language
+                permissions:
+                    - helpers
+            side-menu-item3:
+                label: Персонажи
+                url: frukt/books/persons
+                icon: icon-delicious
+                permissions:
+                    - helpers
+            side-menu-item4:
+                label: 'Места изданий'
+                url: frukt/books/places
+                icon: icon-paper-plane-o
+                permissions:
+                    - helpers
+            side-menu-item5:
+                label: Издательства
+                url: frukt/books/publishers
+                icon: icon-leanpub
+                permissions:
+                    - helpers
+            side-menu-item6:
+                label: Рубрики
+                url: frukt/books/rubrics
+                icon: icon-spotify
+                permissions:
+                    - helpers
+    main-menu-item2:
+        label: Книги
+        url: /
+        icon: icon-book
+        permissions:
+            - books
+        sideMenu:
+            side-menu-item:
+                label: 'Список книг'
+                url: frukt/books/books
+                icon: icon-book
+                permissions:
+                    - books
+permissions:
+    helpers:
+        tab: BOOKS
+        label: 'ДОСТУП КО ВСЕМ СПРАВОЧНИКАМ'
+    books:
+        tab: BOOKS
+        label: 'ДОСТУП К КНИГАМ'

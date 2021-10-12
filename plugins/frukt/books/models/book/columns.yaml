@@ -1,0 +1,5 @@
+columns:
+    title:
+        label: НАЗВАНИЕ
+        type: text
+        searchable: true

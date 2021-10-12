@@ -1,0 +1,12 @@
+list: $/frukt/books/models/place/columns.yaml
+modelClass: Frukt\Books\Models\Place
+title: Places
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'frukt/books/places/update/:id'

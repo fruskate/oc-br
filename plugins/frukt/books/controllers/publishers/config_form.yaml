@@ -1,0 +1,10 @@
+name: Publishers
+form: $/frukt/books/models/publisher/fields.yaml
+modelClass: Frukt\Books\Models\Publisher
+defaultRedirect: frukt/books/publishers
+create:
+    redirect: 'frukt/books/publishers/update/:id'
+    redirectClose: frukt/books/publishers
+update:
+    redirect: frukt/books/publishers
+    redirectClose: frukt/books/publishers

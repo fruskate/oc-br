@@ -1,0 +1,10 @@
+name: Authors
+form: $/frukt/books/models/author/fields.yaml
+modelClass: Frukt\Books\Models\Author
+defaultRedirect: frukt/books/authors
+create:
+    redirect: 'frukt/books/authors/update/:id'
+    redirectClose: frukt/books/authors
+update:
+    redirect: frukt/books/authors
+    redirectClose: frukt/books/authors

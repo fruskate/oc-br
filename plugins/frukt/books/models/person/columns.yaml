@@ -1,0 +1,5 @@
+columns:
+    name:
+        label: ПЕРСОНАЖ
+        type: text
+        searchable: true

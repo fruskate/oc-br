@@ -1,0 +1,5 @@
+fields:
+    name:
+        label: МЕСТО ИЗДАНИЯ
+        span: auto
+        type: text

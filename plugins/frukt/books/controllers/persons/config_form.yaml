@@ -1,0 +1,10 @@
+name: Persons
+form: $/frukt/books/models/person/fields.yaml
+modelClass: Frukt\Books\Models\Person
+defaultRedirect: frukt/books/persons
+create:
+    redirect: 'frukt/books/persons/update/:id'
+    redirectClose: frukt/books/persons
+update:
+    redirect: frukt/books/persons
+    redirectClose: frukt/books/persons

@@ -1,0 +1,5 @@
+columns:
+    name:
+        label: ИЗДАТЕЛЬСТВО
+        type: text
+        searchable: true

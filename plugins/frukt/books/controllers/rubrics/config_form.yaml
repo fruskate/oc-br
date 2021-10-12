@@ -1,0 +1,10 @@
+name: Rubrics
+form: $/frukt/books/models/rubric/fields.yaml
+modelClass: Frukt\Books\Models\Rubric
+defaultRedirect: frukt/books/rubrics
+create:
+    redirect: 'frukt/books/rubrics/update/:id'
+    redirectClose: frukt/books/rubrics
+update:
+    redirect: frukt/books/rubrics
+    redirectClose: frukt/books/rubrics

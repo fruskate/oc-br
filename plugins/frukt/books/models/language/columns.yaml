@@ -1,0 +1,9 @@
+columns:
+    name:
+        label: ЯЗЫК
+        type: text
+        searchable: true
+    name_short:
+        label: КРАТКО
+        type: text
+        searchable: true

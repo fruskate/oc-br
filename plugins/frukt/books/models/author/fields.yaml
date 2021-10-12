@@ -1,0 +1,5 @@
+fields:
+    name:
+        label: АВТОР
+        span: auto
+        type: text

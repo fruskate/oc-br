@@ -1,0 +1,10 @@
+name: Languages
+form: $/frukt/books/models/language/fields.yaml
+modelClass: Frukt\Books\Models\Language
+defaultRedirect: frukt/books/languages
+create:
+    redirect: 'frukt/books/languages/update/:id'
+    redirectClose: frukt/books/languages
+update:
+    redirect: frukt/books/languages
+    redirectClose: frukt/books/languages

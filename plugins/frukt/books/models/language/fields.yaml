@@ -1,0 +1,11 @@
+fields:
+    name:
+        label: ЯЗЫК
+        span: auto
+        type: text
+        comment: 'Полное наименование'
+    name_short:
+        label: ЯЗЫК
+        span: auto
+        type: text
+        comment: 'Краткое наименование'

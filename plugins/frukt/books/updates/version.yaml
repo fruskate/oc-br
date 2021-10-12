@@ -1,0 +1,23 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table frukt_books_authors'
+    - builder_table_create_frukt_books_authors.php
+1.0.3:
+    - 'Created table frukt_books_languages'
+    - builder_table_create_frukt_books_languages.php
+1.0.4:
+    - 'Created table frukt_books_persons'
+    - builder_table_create_frukt_books_persons.php
+1.0.5:
+    - 'Created table frukt_books_places'
+    - builder_table_create_frukt_books_places.php
+1.0.6:
+    - 'Created table frukt_books_publishers'
+    - builder_table_create_frukt_books_publishers.php
+1.0.7:
+    - 'Created table frukt_books_rubrics'
+    - builder_table_create_frukt_books_rubrics.php
+1.0.8:
+    - 'Created table frukt_books_books'
+    - builder_table_create_frukt_books_books.php

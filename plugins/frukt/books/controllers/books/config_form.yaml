@@ -1,0 +1,10 @@
+name: Books
+form: $/frukt/books/models/book/fields.yaml
+modelClass: Frukt\Books\Models\Book
+defaultRedirect: frukt/books/books
+create:
+    redirect: 'frukt/books/books/update/:id'
+    redirectClose: frukt/books/books
+update:
+    redirect: frukt/books/books
+    redirectClose: frukt/books/books
