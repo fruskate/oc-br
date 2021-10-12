@@ -15,6 +15,8 @@ class Language extends Model
      */
     public $timestamps = false;
 
+    protected $fillable = ['name', 'name_short'];
+
 
     /**
      * @var string The database table used by the model.
@@ -25,5 +27,12 @@ class Language extends Model
      * @var array Validation rules
      */
     public $rules = [
+    ];
+
+    public $belongsToMany = [
+        'books' => [
+            'table' => 'mm_book_language',
+            Book::class,
+        ],
     ];
 }

@@ -26,4 +26,11 @@ class Book extends Model
     public $belongsTo = [
         'author' => Author::class,
     ];
+
+    public $belongsToMany = [
+        'languages' => [
+            'table' => 'mm_book_language',
+            Language::class,
+        ],
+    ];
 }

@@ -21,3 +21,6 @@
 1.0.8:
     - 'Created table frukt_books_books'
     - builder_table_create_frukt_books_books.php
+1.0.9:
+    - 'many to many book language'
+    - migration109.php

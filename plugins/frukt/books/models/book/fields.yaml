@@ -21,3 +21,9 @@ fields:
         label: 'ВОЗРАСТНОЕ ОГРАНИЧЕНИЕ'
         span: auto
         type: text
+    languages:
+        label: 'ИСПОЛЬЗУЕМЫЕ ЯЗЫКИ'
+        nameFrom: name_short
+        descriptionFrom: description
+        span: auto
+        type: relation

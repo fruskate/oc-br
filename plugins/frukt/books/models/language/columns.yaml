@@ -7,3 +7,8 @@ columns:
         label: КРАТКО
         type: text
         searchable: true
+    books_count:
+        label: КНИГ
+        type: number
+        relation: books
+        relationCount: true

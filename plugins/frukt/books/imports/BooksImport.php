@@ -2,6 +2,7 @@
 
 use Frukt\Books\Models\Author;
 use Frukt\Books\Models\Book;
+use Frukt\Books\Models\Language;
 use Maatwebsite\Excel\Concerns\ToModel;
 
 class BooksImport implements ToModel
@@ -19,6 +20,17 @@ class BooksImport implements ToModel
         $book->year = $row[5]? : null;
         $book->age = $row[12]? : null;
         $book->save();
+
+        if ($row[6]) {
+            $languages = explode(' , ', $row[6]);
+
+            foreach ($languages as $language) {
+                $modelLanguage = Language::where('name_short', $language)->firstOrCreate(['name_short' => $language]);
+
+                $book->languages()->attach($modelLanguage->id);
+            }
+        }
+
 
 
         return $book;
