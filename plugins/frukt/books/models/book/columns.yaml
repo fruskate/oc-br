@@ -3,3 +3,20 @@ columns:
         label: НАЗВАНИЕ
         type: text
         searchable: true
+    import_id:
+        label: 'ID ИЗ ДАТАСЕТА'
+        type: text
+    author_name:
+        label: 'ИМЯ АВТОРА'
+        type: text
+        relation: author
+        valueFrom: name
+    year:
+        label: ГОД
+        type: text
+    age:
+        label: 'ВОЗРАСТНЫЕ ОГРАНИЧЕНИЯ'
+        type: text
+    created_at:
+        label: СОЗДАНО
+        type: timesince

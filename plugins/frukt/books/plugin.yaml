@@ -59,6 +59,10 @@ navigation:
                 icon: icon-book
                 permissions:
                     - books
+            side-menu-item2:
+                label: 'Импорт датасета'
+                url: frukt/books/dataset
+                icon: icon-download
 permissions:
     helpers:
         tab: BOOKS

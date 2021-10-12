@@ -14,13 +14,13 @@ class BuilderTableCreateFruktBooksBooks extends Migration
             $table->integer('import_id')->nullable()->unsigned();
             $table->integer('author_id')->nullable()->unsigned();
             $table->string('title')->nullable();
-            $table->integer('year')->nullable();
+            $table->string('year')->nullable();
             $table->string('age')->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });
     }
-    
+
     public function down()
     {
         Schema::dropIfExists('frukt_books_books');

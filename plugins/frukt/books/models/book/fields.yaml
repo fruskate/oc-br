@@ -3,3 +3,21 @@ fields:
         label: НАЗВАНИЕ
         span: full
         type: text
+    import_id:
+        label: 'ID ИЗ ДАТАСЕТА'
+        span: auto
+        type: number
+    author:
+        label: АВТОР
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        type: relation
+    year:
+        label: 'ГОД ВЫПУСКА'
+        span: auto
+        type: text
+    age:
+        label: 'ВОЗРАСТНОЕ ОГРАНИЧЕНИЕ'
+        span: auto
+        type: text

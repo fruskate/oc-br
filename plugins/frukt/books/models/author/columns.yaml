@@ -3,3 +3,8 @@ columns:
         label: АВТОР
         type: text
         searchable: true
+    book_counter:
+        label: КНИГ
+        type: number
+        relation: books
+        useRelationCount: true

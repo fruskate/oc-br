@@ -15,6 +15,8 @@ class Author extends Model
      */
     public $timestamps = false;
 
+    protected $fillable = ['name'];
+
 
     /**
      * @var string The database table used by the model.
@@ -25,5 +27,9 @@ class Author extends Model
      * @var array Validation rules
      */
     public $rules = [
+    ];
+
+    public $hasMany = [
+        'books' => Book::class,
     ];
 }
