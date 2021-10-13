@@ -8,11 +8,17 @@ use Frukt\Books\Models\Place;
 use Frukt\Books\Models\Publisher;
 use Frukt\Books\Models\Rubric;
 use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Concerns\WithChunkReading;
+use Maatwebsite\Excel\Concerns\Importable;
+use Maatwebsite\Excel\Concerns\WithProgressBar;
 
-class BooksImport implements ToModel
+class BooksImport implements ToModel, WithProgressBar, WithChunkReading
 {
+    use Importable;
+
     public function model(array $row)
     {
+
         if ($row[2]) { // Если у книги есть название - импортируем её
             if ($row[1]) {
                 $author = Author::where('name', $row[1])->firstOrCreate(['name' => $row[1]]);
@@ -82,5 +88,10 @@ class BooksImport implements ToModel
 
             return $book;
         }
+    }
+
+    public function chunkSize(): int
+    {
+        return 1000;
     }
 }
