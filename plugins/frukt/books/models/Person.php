@@ -15,6 +15,8 @@ class Person extends Model
      */
     public $timestamps = false;
 
+    protected $fillable = ['name'];
+
 
     /**
      * @var string The database table used by the model.
@@ -25,5 +27,12 @@ class Person extends Model
      * @var array Validation rules
      */
     public $rules = [
+    ];
+
+    public $belongsToMany = [
+        'books' => [
+            'table' => 'mm_book_person',
+            Book::class,
+        ],
     ];
 }

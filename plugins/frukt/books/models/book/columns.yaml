@@ -17,6 +17,31 @@ columns:
     age:
         label: 'ВОЗРАСТНЫЕ ОГРАНИЧЕНИЯ'
         type: text
+    languages_count:
+        label: ЯЗЫКОВ
+        type: number
+        relation: languages
+        relationCount: true
+    persons_count:
+        label: ПЕРСОНАЖЕЙ
+        type: number
+        relation: persons
+        relationCount: true
+    places_count:
+        label: МЕСТ
+        type: number
+        relation: places
+        relationCount: true
+    publishers_count:
+        label: ИЗДАТЕЛЬСТВ
+        type: number
+        relation: publishers
+        relationCount: true
+    rubrics_count:
+        label: РУБРИК
+        type: number
+        relation: rubrics
+        relationCount: true
     created_at:
         label: СОЗДАНО
         type: timesince

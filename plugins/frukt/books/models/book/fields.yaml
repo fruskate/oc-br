@@ -24,6 +24,41 @@ fields:
     languages:
         label: 'ИСПОЛЬЗУЕМЫЕ ЯЗЫКИ'
         nameFrom: name_short
-        descriptionFrom: description
+        mode: relation
+        separator: comma
+        customTags: false
+        useKey: false
         span: auto
-        type: relation
+        type: taglist
+    persons:
+        label: ПЕРСОНАЖИ
+        mode: relation
+        separator: comma
+        customTags: true
+        useKey: false
+        span: auto
+        type: taglist
+    places:
+        label: МЕСТА ИЗДАНИЙ
+        mode: relation
+        separator: comma
+        customTags: true
+        useKey: false
+        span: auto
+        type: taglist
+    publishers:
+        label: ИЗДАТЕЛЬСТВА
+        mode: relation
+        separator: comma
+        customTags: true
+        useKey: false
+        span: auto
+        type: taglist
+    rubrics:
+        label: РУБРИКИ
+        mode: relation
+        separator: comma
+        customTags: true
+        useKey: false
+        span: auto
+        type: taglist

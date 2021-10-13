@@ -3,3 +3,8 @@ columns:
         label: МЕСТО ИЗДАНИЯ
         type: text
         searchable: true
+    books_count:
+        label: КНИГ
+        type: number
+        relation: books
+        relationCount: true

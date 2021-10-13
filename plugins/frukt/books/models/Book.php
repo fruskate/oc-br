@@ -32,5 +32,21 @@ class Book extends Model
             'table' => 'mm_book_language',
             Language::class,
         ],
+        'persons' => [
+            'table' => 'mm_book_person',
+            Person::class,
+        ],
+        'places' => [
+            'table' => 'mm_book_place',
+            Place::class,
+        ],
+        'publishers' => [
+            'table' => 'mm_book_publisher',
+            Publisher::class,
+        ],
+        'rubrics' => [
+            'table' => 'mm_book_rubric',
+            Rubric::class,
+        ]
     ];
 }

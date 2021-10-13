@@ -8,12 +8,14 @@ use Model;
 class Publisher extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    
+
     /*
      * Disable timestamps by default.
      * Remove this line if timestamps are defined in the database table.
      */
     public $timestamps = false;
+
+    protected $fillable = ['name'];
 
 
     /**
@@ -25,5 +27,12 @@ class Publisher extends Model
      * @var array Validation rules
      */
     public $rules = [
+    ];
+
+    public $belongsToMany = [
+        'books' => [
+            'table' => 'mm_book_publisher',
+            Book::class,
+        ],
     ];
 }
