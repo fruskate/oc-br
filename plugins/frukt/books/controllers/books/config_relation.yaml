@@ -1,0 +1,15 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+orders:
+    label: Заказ
+    manage:
+        form: $/frukt/books/models/order/fields.yaml
+        list: $/frukt/books/models/order/columns.yaml
+    view:
+        list: $/frukt/books/models/order/columns.yaml
+        toolbarButtons: create|delete
+        defaultSort:
+            column: created_at
+            direction: desc

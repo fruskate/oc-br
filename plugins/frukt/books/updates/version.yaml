@@ -42,3 +42,21 @@
 1.0.15:
     - 'Updated table frukt_books_books'
     - builder_table_update_frukt_books_books_2.php
+1.0.16:
+    - 'Created table frukt_books_users'
+    - builder_table_create_frukt_books_users.php
+1.0.17:
+    - 'create table mm_book_user for book - user relation'
+    - migration1017.php
+1.0.18:
+    - 'Created table frukt_books_orders'
+    - builder_table_create_frukt_books_orders.php
+1.0.19:
+    - 'Updated table frukt_books_books'
+    - builder_table_update_frukt_books_books3.php
+1.0.20:
+    - 'Created table frukt_books_slope_one'
+    - builder_table_create_frukt_books_slope_one.php
+1.0.21:
+    - 'Created table frukt_books_ratings'
+    - builder_table_create_frukt_books_ratings.php

@@ -1,0 +1,20 @@
+fields:
+    book:
+        label: КНИГА
+        nameFrom: title
+        descriptionFrom: description
+        span: auto
+        type: relation
+    user:
+        label: ПОЛЬЗОВАТЕЛЬ
+        nameFrom: id
+        descriptionFrom: description
+        span: auto
+        type: relation
+    event:
+        label: СОБЫТИЕ
+        span: auto
+        type: dropdown
+        options:
+            add: добавлено
+            create_order: заказано

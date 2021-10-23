@@ -62,3 +62,12 @@ fields:
         useKey: false
         span: auto
         type: taglist
+tabs:
+    fields:
+        relation_orders:
+            tab: Заказы
+            span: full
+            type: partial
+            path: relation_orders
+            context:
+                - update

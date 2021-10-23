@@ -1,0 +1,17 @@
+columns:
+    book_name:
+        label: КНИГА
+        type: text
+        searchable: true
+        relation: book
+        valueFrom: title
+    user_id:
+        label: ПОЛЬЗОВАТЕЛЬ
+        type: text
+        searchable: true
+    event:
+        label: ДЕЙСТВИЕ
+        type: text
+    created_at:
+        label: СОЗДАНО
+        type: timesince

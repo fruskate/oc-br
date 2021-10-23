@@ -1,0 +1,7 @@
+columns:
+    id:
+        label: ID
+        type: number
+    pivot[event]:
+        label: СОБЫТИЕ
+        type: text

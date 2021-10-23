@@ -48,6 +48,12 @@ class Book extends Model
         'rubrics' => [
             'table' => 'mm_book_rubric',
             Rubric::class,
+        ],
+    ];
+
+    public $hasMany = [
+        'orders' => [
+            Order::class,
         ]
     ];
 }

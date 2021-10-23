@@ -21,27 +21,31 @@ columns:
         label: ЯЗЫКОВ
         type: number
         relation: languages
-        relationCount: true
+        relationCount: 'true'
     persons_count:
         label: ПЕРСОНАЖЕЙ
         type: number
         relation: persons
-        relationCount: true
+        relationCount: 'true'
     places_count:
         label: МЕСТ
         type: number
         relation: places
-        relationCount: true
+        relationCount: 'true'
     publishers_count:
         label: ИЗДАТЕЛЬСТВ
         type: number
         relation: publishers
-        relationCount: true
+        relationCount: 'true'
     rubrics_count:
         label: РУБРИК
         type: number
         relation: rubrics
-        relationCount: true
+        relationCount: 'true'
     created_at:
         label: СОЗДАНО
         type: timesince
+    rate:
+        label: РЕЙТИНГ
+        type: number
+        sortable: false

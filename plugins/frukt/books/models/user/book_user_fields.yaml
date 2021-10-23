@@ -1,0 +1,12 @@
+fields:
+    id:
+        label: ID
+        span: auto
+        type: number
+    pivot[event]:
+        label: СОБЫТИЕ
+        span: auto
+        type: dropdown
+        options:
+            add: добавлено
+            create_order: заказано

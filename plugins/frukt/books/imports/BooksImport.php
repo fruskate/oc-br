@@ -21,7 +21,7 @@ class BooksImport implements ToModel, WithProgressBar, WithChunkReading
 
         if ($row[2]) { // Если у книги есть название - импортируем её
             $book = Book::where('import_id', $row[0])->first();
-            
+
             if(!$book){
                 if ($row[1]) {
                     $author = Author::where('name', $row[1])->firstOrCreate(['name' => $row[1]]);
