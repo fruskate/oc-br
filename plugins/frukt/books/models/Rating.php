@@ -19,7 +19,12 @@ class Rating extends Model
      * @var array Validation rules
      */
     public $rules = [
+        'user_id' => 'required',
+        'book_id' => 'required',
+        'rating' => 'required'
     ];
+
+    protected $fillable = ['user_id', 'book_id', 'rating'];
 
     public $belongsTo = [
         'book' => Book::class,

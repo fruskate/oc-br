@@ -1,5 +1,6 @@
 <?php namespace Frukt\Books\Models;
 
+use Frukt\Books\Classes\RateHelper;
 use Model;
 
 /**
@@ -21,8 +22,19 @@ class Order extends Model
     public $rules = [
     ];
 
+    protected $fillable = ['book_id', 'user_id', 'event'];
+
     public $belongsTo = [
         'user' => User::class,
         'book' => Book::class,
     ];
+
+    public function afterCreate()
+    {
+        $rating = 0.1000;
+        if ($this->event == 'create_order') {
+            $rating = 0.3000;
+        }
+        RateHelper::setRateToBook($this->book_id, $this->user_id, $rating);
+    }
 }
