@@ -15,5 +15,6 @@ class Plugin extends PluginBase
     public function register()
     {
         $this->registerConsoleCommand('import:dataset', 'Frukt\Books\Console\ImportDataset');
+        $this->registerConsoleCommand('import:books', 'Frukt\Books\Console\ImportBooks');
     }
 }

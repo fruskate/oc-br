@@ -36,3 +36,9 @@
 1.0.13:
     - 'many to many book rubric'
     - migration1013.php
+1.0.14:
+    - 'Updated table frukt_books_books'
+    - builder_table_update_frukt_books_books.php
+1.0.15:
+    - 'Updated table frukt_books_books'
+    - builder_table_update_frukt_books_books_2.php

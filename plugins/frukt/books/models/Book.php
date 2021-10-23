@@ -15,7 +15,8 @@ class Book extends Model
      */
     public $table = 'frukt_books_books';
 
-    protected $fillable = ['import_id', 'author_id', 'title', 'year', 'age'];
+    protected $fillable = ['import_id', 'author_id', 'title', 'year', 'age', 'mos_id', 'annotation', 'total_out_count',
+        'total_inplace_count', 'free_count', 'free_hands', 'free_online', 'ordered_count', 'output_count', 'available'];
 
     /**
      * @var array Validation rules
