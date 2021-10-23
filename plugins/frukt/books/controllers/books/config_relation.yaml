@@ -13,3 +13,14 @@ orders:
         defaultSort:
             column: created_at
             direction: desc
+rates:
+    label: Оценка
+    manage:
+        form: $/frukt/books/models/rating/fields.yaml
+        list: $/frukt/books/models/rating/columns.yaml
+    view:
+        list: $/frukt/books/models/rating/columns.yaml
+        toolbarButtons: create|delete
+        defaultSort:
+            column: created_at
+            direction: desc

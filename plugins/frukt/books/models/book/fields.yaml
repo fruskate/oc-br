@@ -71,3 +71,10 @@ tabs:
             path: relation_orders
             context:
                 - update
+        relation_rates:
+            tab: Оценки
+            span: full
+            type: partial
+            path: relation_rates
+            context:
+                - update

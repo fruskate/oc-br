@@ -1,0 +1,10 @@
+name: Ratings
+form: $/frukt/books/models/rating/fields.yaml
+modelClass: Frukt\Books\Models\Rating
+defaultRedirect: frukt/books/ratings
+create:
+    redirect: 'frukt/books/ratings/update/:id'
+    redirectClose: frukt/books/ratings
+update:
+    redirect: frukt/books/ratings
+    redirectClose: frukt/books/ratings

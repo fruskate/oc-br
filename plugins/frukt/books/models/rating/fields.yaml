@@ -1,0 +1,18 @@
+fields:
+    user:
+        label: ПОЛЬЗОВАТЕЛЬ
+        nameFrom: id
+        descriptionFrom: description
+        span: auto
+        type: relation
+    book:
+        label: КНИГА
+        nameFrom: title
+        descriptionFrom: description
+        span: auto
+        type: relation
+    rating:
+        label: РЕЙТИНГ
+        span: auto
+        type: number
+        comment: 'Внимание! Рейтинг должен быть в формате 0.0000, например 1.000 это высший бал. Средний рейтинг 0.5000'

@@ -1,0 +1,15 @@
+columns:
+    user_id:
+        label: ПОЛЬЗОВАТЕЛЬ
+        type: number
+    book:
+        label: КНИГА
+        type: text
+        relation: book
+        valueFrom: title
+    rating:
+        label: РЕЙТИНГ
+        type: number
+    created_at:
+        label: СОЗДАНО
+        type: timesince

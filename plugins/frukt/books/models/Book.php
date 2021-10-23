@@ -54,6 +54,9 @@ class Book extends Model
     public $hasMany = [
         'orders' => [
             Order::class,
-        ]
+        ],
+        'rates' => [
+            Rating::class,
+        ],
     ];
 }
