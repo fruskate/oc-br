@@ -5,7 +5,9 @@ Book Recomendations
 
 ### Maatwebsite Excel
 
-Установка пакета: `composer required maatwebsite/excel`
+Необходим для того, чтобы работать с импортом и экспортом в excel формате.
+
+Установка пакета: `composer require maatwebsite/excel`
 
 Публикация настроек: `php artisan vendor:publish --provider="Maatwebsite\Excel\ExcelServiceProvider" --tag=config`
 
