@@ -34,4 +34,11 @@ class Dataset extends Controller
             '#answer' => 'Данные успешно загружены. Хорошей работы, о мой повелитель!'
         ];
     }
+
+    public function onLoadBooksJson()
+    {
+        $json = file_get_contents(plugins_path('frukt/books/assets/json/books.json'));
+        $json = json_decode($json);
+        trace_log($json);
+    }
 }
