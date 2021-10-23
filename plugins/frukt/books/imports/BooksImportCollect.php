@@ -7,18 +7,19 @@ use Frukt\Books\Models\Person;
 use Frukt\Books\Models\Place;
 use Frukt\Books\Models\Publisher;
 use Frukt\Books\Models\Rubric;
-use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithChunkReading;
 use Maatwebsite\Excel\Concerns\Importable;
 use Maatwebsite\Excel\Concerns\WithProgressBar;
+use Illuminate\Support\Collection;
+use Maatwebsite\Excel\Concerns\OnEachRow;
+use Maatwebsite\Excel\Row;
 
-class BooksImport implements ToModel, WithProgressBar, WithChunkReading
+class BooksImportCollect implements OnEachRow, WithProgressBar, WithChunkReading
 {
     use Importable;
 
-    public function model(array $row)
+    public function onRow(Row $row)
     {
-
         if ($row[2]) { // Если у книги есть название - импортируем её
             if ($row[1]) {
                 $author = Author::where('name', $row[1])->firstOrCreate(['name' => $row[1]]);
@@ -31,6 +32,7 @@ class BooksImport implements ToModel, WithProgressBar, WithChunkReading
                 'year'      => $row[5] ?: null,
                 'age'       => $row[12] ?: null
             ]);
+
 
             if ($row[6]) {
                 $languages = explode(' , ', $row[6]);
@@ -89,6 +91,6 @@ class BooksImport implements ToModel, WithProgressBar, WithChunkReading
 
     public function chunkSize(): int
     {
-        return 1000;
+        return 5;
     }
 }

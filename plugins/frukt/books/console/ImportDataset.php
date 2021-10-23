@@ -1,6 +1,7 @@
 <?php namespace Frukt\Books\Console;
 
 use Frukt\Books\Imports\BooksImport;
+use Frukt\Books\Imports\BooksImportCollect;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
@@ -25,7 +26,7 @@ class ImportDataset extends Command
     public function handle()
     {
         $this->output->title('Начало импорта');
-        (new BooksImport)->withOutput($this->output)->import('plugins/frukt/books/assets/xlsx/books_dataset.xlsx');
+        (new BooksImport())->withOutput($this->output)->import('plugins/frukt/books/assets/xlsx/books_dataset.xlsx');
         $this->output->success('Импорт завершён');
     }
 
