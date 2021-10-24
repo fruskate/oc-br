@@ -32,16 +32,20 @@ class OrdersImport implements ToModel, WithProgressBar, WithChunkReading
             $book = Book::where('mos_id', $book_id)->first();
             $user = User::where('id', $row[3])->firstOrCreate(['id' => $row[3]]);
 
-            if ($book) {
-                Order::create([
-                    'book_id' => $book->id,
-                    'user_id' => $user->id,
-                    'event' => $row[1],
-                    'created_at' => Carbon::parse($this->toNormalDate($row[2])),
+            if (!$book) {
+                $book = Book::create([
+                    'title' => $book_id,
+                    'mos_id' => $book_id
                 ]);
-            } else {
-                trace_log('Книги с ID '.$book_id.' нет.');
             }
+
+            Order::create([
+                'book_id' => $book->id,
+                'user_id' => $user->id,
+                'event' => $row[1],
+                'created_at' => Carbon::parse($this->toNormalDate($row[2])),
+            ]);
+
 
         }
     }

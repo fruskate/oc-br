@@ -45,7 +45,6 @@ columns:
     created_at:
         label: СОЗДАНО
         type: timesince
-    rate:
-        label: РЕЙТИНГ
+    mos_id:
+        label: ID КНИГИ НА MOS.RU
         type: number
-        sortable: false
