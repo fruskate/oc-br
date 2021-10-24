@@ -7,7 +7,7 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 use Excel;
 
-class ImportOrders extends Command
+class ImportCirculations extends Command
 {
     /**
      * @var string The console command name.
