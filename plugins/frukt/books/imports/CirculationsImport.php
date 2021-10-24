@@ -15,19 +15,19 @@ use Maatwebsite\Excel\Concerns\WithChunkReading;
 use Maatwebsite\Excel\Concerns\Importable;
 use Maatwebsite\Excel\Concerns\WithProgressBar;
 
-class OrdersImport implements ToModel, WithProgressBar, WithChunkReading
+class CirculationsImport implements ToModel, WithProgressBar, WithChunkReading
 {
     use Importable;
 
     public function model(array $row)
     {
-        if ($row[0]) { // Если есть поле со ссылкой на книгу - импортим действие по ней.
+        if ($row[1]) { // Если есть поле со ссылкой на книгу - импортим действие по ней.
 
-            $book_id = substr($row[0], 30);
-            $book_id = substr($book_id,0,-1);
+            $book_id = $row[1];
+
 
             $book = Book::where('mos_id', $book_id)->first();
-            $user = User::where('id', $row[3])->firstOrCreate(['id' => $row[3]]);
+            $user = User::where('id', $row[5])->firstOrCreate(['id' => $row[5]]);
 
             if (!$book) {
                 $book = Book::create([
@@ -39,8 +39,8 @@ class OrdersImport implements ToModel, WithProgressBar, WithChunkReading
             Order::create([
                 'book_id' => $book->id,
                 'user_id' => $user->id,
-                'event' => $row[1],
-                'created_at' => Carbon::parse($this->toNormalDate($row[2])),
+                'event' => 'create_order',
+                'created_at' => Carbon::parse($this->toNormalDate($row[3])),
             ]);
 
 
