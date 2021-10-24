@@ -44,6 +44,11 @@ class ImportBooks extends Command
                 $book->save();
                 $yesCounter++;
             } else {
+                Book::create([
+                    'title' => $item->title,
+                    'annotation' => $item->annotation,
+                    'mos_id' => $item->id
+                ]);
                 $noCounter++;
             }
             unset($book);

@@ -39,6 +39,8 @@ class OrdersImport implements ToModel, WithProgressBar, WithChunkReading
                     'event' => $row[1],
                     'created_at' => Carbon::parse($this->toNormalDate($row[2])),
                 ]);
+            } else {
+                trace_log('Книги с ID '.$book_id.' нет.');
             }
 
         }
