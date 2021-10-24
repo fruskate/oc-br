@@ -22,7 +22,7 @@ class Order extends Model
     public $rules = [
     ];
 
-    protected $fillable = ['book_id', 'user_id', 'event'];
+    protected $fillable = ['book_id', 'user_id', 'event', 'created_at'];
 
     public $belongsTo = [
         'user' => User::class,

@@ -16,6 +16,8 @@ Book Recomendations System for mos.ru
 5. Далее коннектим те книги, которые имеются в books.json предоставленном экспертами командой
 `php artisan import:books`
 
+6. После чего, забиваем базу данных заказами через команду `php artisan import:orders`
+
 ## Дополнительные пакеты
 
 ### Maatwebsite Excel

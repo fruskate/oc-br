@@ -1,0 +1,26 @@
+<div>
+    {% if user %}
+        <div class="alert alert-success">
+            <p>Пользователь найден! Рекомендуемые книги:</p>
+            {% for item in books %}
+                <div class="h3">{{ loop.index }} {{ item.title }}</div>
+                <p>{{ item.annotation }}</p>
+            {% endfor %}
+        </div>
+
+        <h3>История заказов</h3>
+
+        {% for item in user.orders %}
+            <div class="card">
+                <div class="card-body">
+                    {{ item.book.title }} <span class="badge bg-{% if item.event == 'add' %}danger">добавлял{% else %}success">заказывал{% endif %}</span> {{ item.created_at.diffForHumans() }}
+                    <p>{{ item.book.annotation }}</p>
+                </div>
+            </div>
+        {% else %}
+            <div class="alert alert-danger">К сожалению, данный пользователь ещё не делал заказов</div>
+        {% endfor %}
+    {% else %}
+        <div class="alert alert-danger">Такой пользователь не найден!</div>
+    {% endif %}
+</div>

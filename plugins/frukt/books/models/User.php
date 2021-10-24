@@ -8,7 +8,7 @@ use Model;
 class User extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    
+
     /*
      * Disable timestamps by default.
      * Remove this line if timestamps are defined in the database table.
@@ -25,5 +25,16 @@ class User extends Model
      * @var array Validation rules
      */
     public $rules = [
+    ];
+
+    protected $fillable = ['id'];
+
+    public $hasMany = [
+        'orders' => [
+            Order::class,
+        ],
+        'rates' => [
+            Rating::class,
+        ],
     ];
 }
