@@ -32,7 +32,8 @@ class OrdersImport implements ToModel, WithProgressBar, WithChunkReading
             if (!$book) {
                 $book = Book::create([
                     'title' => $book_id,
-                    'mos_id' => $book_id
+                    'mos_id' => $book_id,
+                    'annotation' => '<a href="https://www.mos.ru/knigi/book/"'.$book_id.'>Посмотреть на сайте MOS.RU</a>'
                 ]);
             }
 
